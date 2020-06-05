@@ -1,0 +1,166 @@
+* {
+    color: #fff;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    background: linear-gradient(-10deg, #C62828, #BA68C8);
+    min-height: 100%;
+    font-size: 16px;
+}
+
+body {}
+
+table {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+th {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid #fff;
+    border-radius: 2px;
+    padding: 10px;
+    text-align: center;
+}
+
+td {
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid #fff;
+    border-radius: 2px;
+    padding: 10px;
+}
+
+input[type=text],
+select {
+    width: 90%;
+    padding: 12px 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    margin: 8px 0;
+    border: none;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type=submit] {
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    font-size: 22px;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+textarea {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 20px;
+}
+
+option {
+    background-color: transparent;
+    color: dimgrey;
+}
+
+input[type=radio] {
+    font-size: 18px;
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    border: rgba(255, 255, 255, 0.5) solid 1px;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+
+.container .checkmark:after {
+    left: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.circle{
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    border: rgba(255, 255, 255, 0.5) solid 1px;
+}
+
+.container:hover input ~ .circle {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.circle:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.container input:checked ~ .circle:after {
+    display: block;
+}
+
+.container .circle:after {
+    left: 4px;
+    top: 4px;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+}
